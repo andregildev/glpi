@@ -1849,7 +1849,7 @@ JAVASCRIPT;
          \$ct-series-names: ({$series_names});
          \$ct-series-colors: ({$series_colors});
 
-         @import 'css/chartist/generate';
+         @import 'css/components/chartist/generate';
       }");
 
       return $palette_css;
