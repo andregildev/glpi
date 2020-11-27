@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb7baa1db5412a07fa1d104953402db2",
+    "content-hash": "835e6809f709b2893037c273061491b1",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -5098,6 +5098,51 @@
                 "notation"
             ],
             "time": "2017-01-20T21:14:22+00:00"
+        },
+        {
+            "name": "friendsoftwig/twigcs",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friendsoftwig/twigcs.git",
+                "reference": "14b7993651de8b5fd74184350cf49454d8d8941a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friendsoftwig/twigcs/zipball/14b7993651de8b5fd74184350cf49454d8d8941a",
+                "reference": "14b7993651de8b5fd74184350cf49454d8d8941a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "symfony/console": "^3.4 || ^4.3 || ^5.0",
+                "symfony/filesystem": "^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "^3.4 || ^4.3 || ^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.2"
+            },
+            "bin": [
+                "bin/twigcs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfTwig\\Twigcs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tristan Maindron",
+                    "email": "tmaindron@gmail.com"
+                }
+            ],
+            "description": "Checkstyle automation for Twig",
+            "time": "2020-10-26T23:53:19+00:00"
         },
         {
             "name": "glpi-project/coding-standard",
