@@ -1231,6 +1231,9 @@ class Html {
          'js_files'  => [],
       ];
 
+      $tpl_vars['css_files'][] = 'public/lib/tabler.css';
+      Html::requireJs('tabler');
+
       $tpl_vars['css_files'][] = 'public/lib/base.css';
       //JSTree JS part is loaded on demand... But from an ajax call to display entities. Need to have CSS loaded.
       $tpl_vars['css_files'][] = 'css/legacy/jstree-glpi.scss';
@@ -6400,6 +6403,9 @@ JAVASCRIPT;
          return;
       }
       switch ($name) {
+         case 'tabler':
+            $_SESSION['glpi_js_toload'][$name][] = 'public/lib/tabler.js';
+            break;
          case 'clipboard':
             $_SESSION['glpi_js_toload'][$name][] = 'js/clipboard.js';
             break;
