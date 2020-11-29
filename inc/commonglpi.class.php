@@ -656,7 +656,7 @@ class CommonGLPI {
 
       if ($nb) {
          //TRANS: %1$s is the name of the tab, $2$d is number of items in the tab between ()
-         $text = sprintf(__('%1$s %2$s'), $text, "<sup class='tab_nb'>$nb</sup>");
+         $text = sprintf(__('%1$s %2$s'), $text, "<span class='badge'>$nb</span>");
       }
       return $text;
    }
@@ -853,8 +853,7 @@ class CommonGLPI {
 
          $extraparamhtml = "&amp;".Toolbox::append_params($cleaned_options, '&amp;');
       }
-      echo "<div class='glpi_tabs ".($this->isNewID($ID)?"new_form_tabs":"")."'>";
-      echo "<div id='tabspanel' class='center-h'></div>";
+      //echo "<div class='".($this->isNewID($ID)?"new_form_tabs":"")."'>";
       $onglets     = $this->defineAllTabs($options);
       $display_all = true;
       if (isset($onglets['no_all_tab'])) {
@@ -886,7 +885,7 @@ class CommonGLPI {
          Ajax::createTabs('tabspanel', 'tabcontent', $tabs, $this->getType(), $ID,
                           $this->taborientation, $options);
       }
-      echo "</div>";
+      //echo "</div>";
    }
 
 
@@ -972,7 +971,7 @@ class CommonGLPI {
             }
          }
          $cleantarget = Html::cleanParametersURL($target);
-         echo "<div class='navigationheader'>";
+         echo "<div class='navigationheader border-bottom'>";
 
          if ($first >= 0) {
             echo "<a href='$cleantarget?id=$first$extraparamhtml'
@@ -1223,6 +1222,8 @@ class CommonGLPI {
          $options += $_REQUEST['tab_params'];
       }
 
+      echo "<div class='container-fluid card'>";
+      echo "<div class='row'>";
       $this->showNavigationHeader($options);
       if (!self::isLayoutExcludedPage() && self::isLayoutWithMain()) {
 
@@ -1232,7 +1233,11 @@ class CommonGLPI {
          $this->showPrimaryForm($options);
       }
 
+      echo "</div>";
+      echo "<div class='row'>";
       $this->showTabsContent($options);
+      echo "</div>";
+      echo "</div>";
    }
 
 
