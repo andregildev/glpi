@@ -753,17 +753,17 @@ $break_tablets: 1300px;
    }
 
    /* ################--------------- Layout  ---------------#################### */
-   &.layout_classic.form div.navigationheader, &.layout_vsplit.form div.navigationheader {
+   &.layout_vsplit.form div.navigationheader {
       margin: 0 auto 10px;
       width: 90%;
    }
 
-   &.layout_classic.form .main_form, &.layout_vsplit.form .main_form {
+   &.layout_vsplit.form .main_form {
       width: 950px;
       margin: 0 auto;
    }
 
-   &.layout_classic.form div.ui-tabs, &.layout_vsplit.form div.ui-tabs {
+   &.layout_vsplit.form div.ui-tabs {
       width: 950px;
    }
 
@@ -798,7 +798,6 @@ $break_tablets: 1300px;
    .ui-tabs {
       background: #FFF repeat-x top left;
       box-shadow: 0px 3px 1px #dfdfdf;
-      width: 90%;
    }
 
    .ui-tabs-anchor {
@@ -973,7 +972,6 @@ $break_tablets: 1300px;
       z-index: 1;
       text-align: left;
       font-size: 11px;
-      max-width: 950px;
       width: 100%;
       border-spacing: 0;
    }
@@ -984,7 +982,6 @@ $break_tablets: 1300px;
       z-index: 1;
       text-align: left;
       font-size: 11px;
-      max-width: 950px;
       width: 100%;
       border-spacing: 0;
       box-shadow: 0px 1px 2px 1px #999;
@@ -1416,7 +1413,6 @@ $break_tablets: 1300px;
    .navigationheader {
       margin: 0 auto;
       padding: 7px 10px;
-      width: 90%;
       border: 1px solid #e1e1e1;
       background-color: #FFF;
       box-sizing: border-box;
@@ -1521,10 +1517,6 @@ $break_tablets: 1300px;
       margin-bottom: 10px;
       box-shadow: 0px 1px 2px 0px #D2D2D2;
       border: 0;
-   }
-
-   &.layout_classic .navigationheader {
-      width: 952px;
    }
 
    .tab_cadre_pager .pager_controls img {
