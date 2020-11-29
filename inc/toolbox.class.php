@@ -3025,12 +3025,13 @@ class Toolbox {
     * Get picture URL.
     *
     * @param string $path
+    * @param bool  bool get full path
     *
     * @return null|string
     *
     * @since 9.5.0
     */
-   static function getPictureUrl($path) {
+   static function getPictureUrl($path, $full) {
       global $CFG_GLPI;
 
       $path = Html::cleanInputText($path); // prevent xss
@@ -3039,7 +3040,7 @@ class Toolbox {
          return null;
       }
 
-      return $CFG_GLPI["root_doc"] . '/front/document.send.php?file=_pictures/' . $path;
+      return ($full ? $CFG_GLPI["root_doc"] : "") . '/front/document.send.php?file=_pictures/' . $path;
    }
 
    /**
