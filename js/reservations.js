@@ -45,6 +45,7 @@ var Reservations = function() {
             }
 
             if (my.is_tab) {
+               // TODO .glpi_tabs not exists anymore
                _newheight = $('.glpi_tabs ').height() - 150;
             }
 
